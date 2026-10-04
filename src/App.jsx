@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './components/Home';
+import StoreSection from './components/StoreSection';
 
 export default function App() {
-  return (
-    <div className="bg-[#020617] min-h-screen flex flex-col justify-between">
-      <Navbar />
-      
-      {/* Website Body Content (Hero, Store, Plans) yahan aayenge */}
-      <div className="flex-1">
-        {/* Components go here */}
-      </div>
+  const [cartCount, setCartCount] = useState(2);
 
+  return (
+    <div className="bg-[#020617] min-h-screen text-slate-100 selection:bg-cyan-500 selection:text-white flex flex-col justify-between">
+      
+      {/* Global Navbar */}
+      <Navbar cartCount={cartCount} />
+
+      {/* Main Content & Routes */}
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/store" element={<StoreSection />} />
+        </Routes>
+      </main>
+
+      {/* Global Footer */}
       <Footer />
+      
     </div>
   );
 }
