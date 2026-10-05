@@ -1,4 +1,3 @@
-import React from 'react';
 import { ShoppingBag, Star } from 'lucide-react';
 
 export default function StoreSection() {
@@ -58,7 +57,7 @@ export default function StoreSection() {
                   onClick={() => buyOnWhatsapp(item.name)}
                   className="bg-cyan-500/10 hover:bg-cyan-500 text-cyan-400 hover:text-white border border-cyan-500/30 px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all flex items-center gap-1.5"
                 >
-                  <ShoppingBag className="w-3.5 h-3.5" />
+                  <ShoppingBag className="w-3.5  h-3.5" />
                   <span>Buy</span>
                 </button>
               </div>

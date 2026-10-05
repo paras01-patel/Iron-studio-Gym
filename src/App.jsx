@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import StoreSection from './components/StoreSection';
+import About from './components/About';
 
 export default function App() {
   const [cartCount, setCartCount] = useState(2);
@@ -18,6 +19,7 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/store" element={<StoreSection />} />
         </Routes>
       </main>
