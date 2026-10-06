@@ -29,7 +29,7 @@ export default function Navbar({ cartCount = 2 }) {
             <a href="#home" className="hover:text-cyan-400 transition-colors duration-200">Home</a>
           </li>
           <li>
-            <a href="#about" className="hover:text-cyan-400 transition-colors duration-200">About Us</a>
+            <a href="#aboutpage" className="hover:text-cyan-400 transition-colors duration-200">About Us</a>
           </li>
           <li>
             <a href="#plans" className="hover:text-cyan-400 transition-colors duration-200">Membership</a>
