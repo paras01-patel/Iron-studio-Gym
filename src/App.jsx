@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import PlansPage from './components/PlansPage';
 import AboutPage from './components/AboutPage';
+import StorePage from './components/StorePage';
+import { Store } from 'lucide-react';
 
 export default function App() {
   const [cartCount, setCartCount] = useState(2);
@@ -21,6 +23,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutpage" element={<AboutPage />} />
           <Route path="/planspage" element={<PlansPage />} />
+          <Route path="/storepage" element={<StorePage />} />
         </Routes>
       </main>
 

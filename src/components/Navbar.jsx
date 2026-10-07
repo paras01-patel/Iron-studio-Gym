@@ -26,16 +26,16 @@ export default function Navbar({ cartCount = 2 }) {
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-8 text-slate-300 font-semibold text-xs uppercase tracking-widest">
           <li>
-            <a href="#home" className="hover:text-cyan-400 transition-colors duration-200">Home</a>
+            <a href="/" className="hover:text-cyan-400 transition-colors duration-200">Home</a>
           </li>
           <li>
-            <a href="#aboutpage" className="hover:text-cyan-400 transition-colors duration-200">About Us</a>
+            <a href="aboutpage" className="hover:text-cyan-400 transition-colors duration-200">About Us</a>
           </li>
           <li>
-            <a href="#plans" className="hover:text-cyan-400 transition-colors duration-200">Membership</a>
+            <a href="planspage" className="hover:text-cyan-400 transition-colors duration-200">Membership</a>
           </li>
           <li>
-            <a href="#store" className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-1.5 group">
+            <a href="store" className="hover:text-cyan-400 transition-colors duration-200 flex items-center gap-1.5 group">
               <span>Store</span>
               <span className="bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[9px] font-black px-1.5 py-0.5 rounded tracking-normal group-hover:bg-emerald-500 group-hover:text-white transition-all">
                 SUPPS
