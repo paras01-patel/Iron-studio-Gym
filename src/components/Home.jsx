@@ -90,7 +90,7 @@ export default function Home() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               <Link 
-                to="/plans" 
+                to="planspage" 
                 className="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold uppercase text-xs tracking-wider shadow-xl shadow-cyan-500/25 transition-all text-center flex items-center justify-center gap-2 active:scale-95"
               >
                 <span>View Gym Plans</span>

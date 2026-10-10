@@ -6,8 +6,11 @@ import Home from './components/Home';
 import PlansPage from './components/PlansPage';
 import AboutPage from './components/AboutPage';
 import StorePage from './components/StorePage';
-import { Store } from 'lucide-react';
+import { Contact, Store } from 'lucide-react';
 import AdminDashboard from './components/AdminDashboard';
+import LoginPage from './components/LoginPage';
+import Contactt from './components/Contactt';
+import TrainersPage from './components/Trainers';
 
 export default function App() {
   const [cartCount, setCartCount] = useState(2);
@@ -24,8 +27,12 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutpage" element={<AboutPage />} />
           <Route path="/planspage" element={<PlansPage />} />
-          <Route path="/storepage" element={<StorePage />} />
-          <Route path="/admindashboard" element={<AdminDashboard />} />
+          <Route path="/store" element={<StorePage />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/contact" element={<Contactt />} />
+          <Route path="/trainers" element={<TrainersPage />} />
+          
         </Routes>
       </main>
 
