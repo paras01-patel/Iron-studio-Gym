@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Dumbbell, Menu, X, ShoppingBag, Zap, User, LogOut, ChevronDown } from 'lucide-react';
+import { Dumbbell, Menu, X, ShoppingBag, Zap, User, LogOut, ChevronDown, UserCircle } from 'lucide-react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
 export default function Navbar({ cartCount = 2 }) {
@@ -30,6 +30,13 @@ export default function Navbar({ cartCount = 2 }) {
   const handleLoginRedirect = () => {
     setIsOpen(false);
     navigate('/login');
+  };
+
+  // Handle Profile Click
+  const handleProfileRedirect = () => {
+    setShowDropdown(false);
+    setIsOpen(false);
+    navigate('/profile');
   };
 
   // Handle Logout
@@ -117,13 +124,22 @@ export default function Navbar({ cartCount = 2 }) {
                 <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
               </button>
 
-              {/* User Dropdown */}
+              {/* User Dropdown Menu */}
               {showDropdown && (
                 <div className="absolute right-0 mt-2 w-48 bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-2 z-50 space-y-1">
                   <div className="px-3 py-2 border-b border-slate-800">
                     <span className="text-[10px] uppercase font-bold text-slate-400 block">Logged in as</span>
                     <span className="text-xs font-black text-white truncate block">{userName}</span>
                   </div>
+
+                  {/* Profile Page Redirect Button */}
+                  <button
+                    onClick={handleProfileRedirect}
+                    className="w-full flex items-center gap-2 px-3 py-2 text-xs font-bold uppercase text-slate-200 hover:bg-cyan-500/10 hover:text-cyan-400 rounded-xl transition cursor-pointer"
+                  >
+                    <UserCircle className="w-4 h-4 text-cyan-400" />
+                    <span>My Profile</span>
+                  </button>
 
                   <button
                     onClick={handleLogout}
@@ -184,9 +200,12 @@ export default function Navbar({ cartCount = 2 }) {
           <div className="pt-2 border-t border-slate-800">
             {isLoggedIn ? (
               <div className="space-y-3">
-                <div className="flex items-center gap-2 bg-slate-900 p-3 rounded-xl border border-slate-800">
-                  <User className="w-4 h-4 text-cyan-400" />
-                  <span className="text-xs font-bold text-white uppercase">{userName}</span>
+                <div 
+                  onClick={handleProfileRedirect}
+                  className="flex items-center gap-2 bg-slate-900 p-3 rounded-xl border border-slate-800 cursor-pointer hover:border-cyan-500 transition"
+                >
+                  <UserCircle className="w-5 h-5 text-cyan-400" />
+                  <span className="text-xs font-bold text-white uppercase">{userName} (View Profile)</span>
                 </div>
                 <button 
                   onClick={handleLogout}

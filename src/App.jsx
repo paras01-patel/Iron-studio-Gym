@@ -11,6 +11,7 @@ import AdminDashboard from './components/AdminDashboard';
 import LoginPage from './components/LoginPage';
 import Contactt from './components/Contactt';
 import TrainersPage from './components/Trainers';
+import ProfilePage from './components/ProfilePage';
 
 export default function App() {
   const [cartCount, setCartCount] = useState(2);
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/contact" element={<Contactt />} />
           <Route path="/trainers" element={<TrainersPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
           
         </Routes>
       </main>
